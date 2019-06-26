@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS news;
 USE news;
-create table if not exists admin_user
+create table if not exists admin
 (
 	id int auto_increment
 		primary key,
@@ -18,7 +18,7 @@ create table if not exists contents
 )
 ;
 
-INSERT INTO admin_user(username, password) VALUES('admin', MD5(RAND()));
+INSERT INTO admin(username, password) VALUES('admin', MD5(RAND()));
 
 INSERT INTO contents(title, content) values
 ('测试新闻1', '哈哈哈哈'),
